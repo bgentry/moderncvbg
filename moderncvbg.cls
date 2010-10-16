@@ -376,6 +376,10 @@
 \newcommand*{\cvlistitem}[2][\listitemsymbol{}]{%
   \cvline[0pt]{}{#1~\begin{minipage}[t]{\listitemmaincolumnwidth}#2\end{minipage}}}
 
+% usage: \cvlistitemsmall[symbol]{point1}
+\newcommand*{\cvlistitemsmall}[2][\listitemsymbol{}]{%
+  \cvline[0pt]{}{\small#1~\begin{minipage}[t]{\listitemmaincolumnwidth}#2\end{minipage}}}
+
 % usage: \cvlistdoubleitem[symbol]{point1}{point2}
 \newcommand*{\cvlistdoubleitem}[3][\listitemsymbol{}]{%
   \cvline[0pt]{}{#1~\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
@@ -383,6 +387,14 @@
   \ifthenelse{\equal{#3}{}}%
     {}%
     {#1~\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
+
+% usage: \cvlistdoubleitemsmall[symbol]{point1}{point2}
+\newcommand*{\cvlistdoubleitemsmall}[3][\listitemsymbol{}]{%
+  \cvline[0pt]{}{\small#1~\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+  \hfill%
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\small#1~\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
 
 % usage: \cventry{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
 \newcommand*{\cventry}[6]{%
