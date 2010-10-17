@@ -1,4 +1,4 @@
-%% start of file `moderncv.cls'.
+%% start of file `moderncvbg.cls'.
 %% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
@@ -11,7 +11,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{moderncv}[2010/05/24 v0.8 modern curriculum vitae document class]
+\ProvidesClass{moderncvbg}[2010/05/24 v0.8 modern curriculum vitae document class]
 
 
 %-------------------------------------------------------------------------------
@@ -88,8 +88,8 @@
 %\RequirePackage{etoolbox}
 \let\@endpreamblehook\@empty
 \def\AtEndPreamble{\g@addto@macro\@endpreamblehook}
-\let\moderncv@document\document
-\def\document{\endgroup\@endpreamblehook\begingroup\moderncv@document}
+\let\moderncvbg@document\document
+\def\document{\endgroup\@endpreamblehook\begingroup\moderncvbg@document}
 
 % if... then... else... constructs
 \RequirePackage{ifthen}
@@ -149,7 +149,7 @@
       pdfpagemode   = UseNone,% do not show thumbnails or bookmarks on opening
 %      pdfstartview  = FitH,
       pdfstartpage  = 1,
-      pdfcreator    = \LaTeX{} with `moderncv' package,
+      pdfcreator    = \LaTeX{} with `moderncvbg' package,
       pdfproducer   = \LaTeX{},
       bookmarksopen = true,
       pdfauthor     = \@firstname~\@middlename~\@familyname,
@@ -225,6 +225,7 @@
 \definecolor{hintcolor}{rgb}{0,0,0}
 
 % fonts
+\usepackage{fontspec} \usepackage{xunicode} \usepackage{xltxtra}
 \providecommand*{\firstnamefont}{}
 \providecommand*{\middlenamefont}{}
 \providecommand*{\familynamefont}{}
@@ -277,7 +278,7 @@
 \newcommand*{\photo}[2][64pt]{\def\@photowidth{#1}\def\@photo{#2}}
 \newcommand*{\quote}[1]{\def\@quote{#1}}
 
-% length used by the moderncv layout
+% length used by the moderncvbg layout
 % quote length
 \newlength{\quotewidth}
 % section lengths
@@ -367,7 +368,7 @@
 \newcommand*{\cvdaterange}[4]{%
   \begin{tabular}[t]{*{3}{c}}
     \textsc{#1} & \multirow{2}{*}{\hspace{4pt} -- \hspace{4pt}} & \textsc{#3} \\
-    #2 & & #4
+    {\addfontfeature{Numbers=Lowercase} #2} & & {\addfontfeature{Numbers=Lowercase} #4}
   \end{tabular}
 }
 
@@ -534,4 +535,4 @@
 \endinput
 
 
-%% end of file `moderncv.cls'.
+%% end of file `moderncvbg.cls'.
