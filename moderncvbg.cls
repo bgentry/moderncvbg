@@ -4,7 +4,8 @@
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
-
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 
 %-------------------------------------------------------------------------------
 %                identification
@@ -157,12 +158,6 @@
       pdfkeywords   = \@firstname~\@middlename~\@familyname{} curriculum vit\ae{}}}
   \pagenumbering{arabic}% has to be issued after loading hyperref
 }
-
-% graphics
-\ifpdf
-  \RequirePackage[pdftex]{graphicx}
-\else
-  \RequirePackage[dvips]{graphicx}\fi
 
 % headers and footers
 \usepackage{fancyhdr}
