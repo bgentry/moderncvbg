@@ -1,11 +1,11 @@
-moderncv -- a modern curriculum vitae class
+moderncvbg -- a modern curriculum vitae class
 
-Moderncv provides a documentclass for typesetting modern curriculum vitaes in
+Moderncvbg provides a documentclass for typesetting modern curriculum vitaes in
 various styles. It is fairly customizable, allowing you to define your own style
 by changing the colors, the fonts, ... and provides two default styles: classic
 and casual.
 
-The moderncv documentclass need it's input to be formatted with regular
+The moderncvbg documentclass need it's input to be formatted with regular
 commands like:
   \section,
   \subsection,
@@ -23,5 +23,9 @@ Until a decent manual is written, you can always look in the "examples"
 directory for some examples.
 
 
-Author: Xavier Danaux <xdanaux@gmail.com>
+Original Author: Xavier Danaux <xdanaux@gmail.com>
 Date: 28 May 2007
+
+Revision Made By:
+Author: Blake Gentry <blakesgentry@gmail.com>
+Date: 18 Oct 2010
