@@ -381,6 +381,10 @@
 \newcommand*{\cvlistitemsmall}[2][\listitemsymbol{}]{%
   \cvline[0pt]{}{\small#1~\begin{minipage}[t]{\listitemmaincolumnwidth}#2\end{minipage}}}
 
+% usage: \cvlistitemsmallwithtitle[symbol]{title}{point1}
+\newcommand*{\cvlistitemsmallwithtitle}[3][\listitemsymbol{}]{%
+  \cvline[0pt]{#2}{\small#1~\begin{minipage}[t]{\listitemmaincolumnwidth}#3\end{minipage}}}
+
 % usage: \cvlistdoubleitem[symbol]{point1}{point2}
 \newcommand*{\cvlistdoubleitem}[3][\listitemsymbol{}]{%
   \cvline[0pt]{}{#1~\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
