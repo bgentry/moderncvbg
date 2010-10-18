@@ -367,8 +367,8 @@
 % usage: \cvdaterange{month1}{year1}{month2}{year2}
 \newcommand*{\cvdaterange}[4]{%
   \begin{tabular}[t]{*{3}{c}}
-    \textsc{#1} & \multirow{2}{*}{\hspace{4pt} -- \hspace{4pt}} & \textsc{#3} \\
-    {\addfontfeature{Numbers=Lowercase} #2} & & {\addfontfeature{Numbers=Lowercase} #4}
+    \ifthenelse{\equal{#1}{}}{}{\textsc{#1}} & \ifthenelse{\equal{#1}{}}{}{\multirow{2}{*}{\hspace{4pt} -- \hspace{4pt}}} & \textsc{#3} \\
+    \ifthenelse{\equal{#1}{}}{}{\addfontfeature{Numbers=Lowercase} #2} & & {\addfontfeature{Numbers=Lowercase} #4}
   \end{tabular}
 }
 
