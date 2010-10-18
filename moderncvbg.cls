@@ -349,7 +349,7 @@
 % usage: \cvline{margintext}{linetext}
 \newcommand*{\cvline}[3][.25em]{%
   \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
- 	  \raggedleft\hintfont{#2} &{#3}%
+ 	  \raggedleft\hintfont{\addfontfeature{Numbers=OldStyle}\textsc{#2}} &{#3}%
   \end{tabular}\\[#1]}
 
 \newcommand*{\cvdescriptionline}[3][.25em]{
